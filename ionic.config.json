@@ -1,0 +1,7 @@
+{
+  "name": "prim_subject_bd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
