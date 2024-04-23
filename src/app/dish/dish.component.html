@@ -1,0 +1,36 @@
+<ion-card *ngIf="!editing">
+  <ion-item>{{ dish.name }} </ion-item>
+  <ion-item>{{ dish.price }} </ion-item>
+  <ion-item>
+    <ion-button fill="outline" (click)="deleteDish()">
+      <ion-icon name="trash-outline"></ion-icon>
+      Видалити</ion-button
+    >
+    <ion-button fill="outline" (click)="editDishShow()">
+      <ion-icon name="pencil-outline"></ion-icon>
+      Редагувати
+    </ion-button>
+  </ion-item>
+</ion-card>
+<ion-card *ngIf="editing">
+  <ion-item>
+    <ion-label position="stacked">Введіть назву</ion-label>
+    <ion-input type="text" #InputName [value]="dish.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Введіть ціну</ion-label>
+    <ion-input
+      type="number"
+      min="0"
+      #InputPrice
+      [value]="dish.price"
+    ></ion-input>
+  </ion-item>
+  <ion-button
+    fill="outline"
+    (click)="saveEdit(InputName.value, InputPrice.value)"
+  >
+    <ion-icon name="checkmark-circle-outline"></ion-icon>
+    Зберегти зміни</ion-button
+  >
+</ion-card>

@@ -1,27 +1,56 @@
-#container {
-  text-align: center;
+$lightgray: #eee;
+$brown-lighter: #dbc7b1;
+$brown-light: #d69762;
+$brown: #916953;
+$brown-dark: #543b2e;
+$brown-reallydark: #26130f;
+$yellow: #ffd862;
+.body {
+  background: #bfb1ac;
+  font-family: "Raleway", sans-serif;
+}
+.pie-serving {
+  font: 400 16px Raleway;
+  color: $brown;
+  margin: 20px 0;
+  max-width: 300px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  svg {
+    width: 40px;
+
+    path {
+      fill: $brown;
+    }
+  }
+
+  p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 12px 6px 6px;
+  }
+}
+ion-card, ion-item,ion-header,ion-toolbar {
+  --background: #dbc7b1;
+  --color:#26130f;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-card-title {
+  --color: #543b2e;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-card-subtitle {
+  --color: #d69762;
 }
-
-#container a {
-  text-decoration: none;
+ion-button
+{
+  --color: #543b2e;
+  --border-color: #dbc7b1;
+  --border-style: solid;
+    --border-width: 1px;
+  
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+}
+ion-content {
+  --background: #EFF6FD url('../Image/cofee5.jpg') no-repeat 100% 100%;
+   
 }

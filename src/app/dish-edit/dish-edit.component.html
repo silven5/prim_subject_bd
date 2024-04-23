@@ -1,0 +1,22 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title> Додати страву </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <form [formGroup]="myFormDish" (ngSubmit)="addDish()">
+      <ion-label position="stacked">Введіть назву</ion-label>
+      <ion-input formControlName="dishName" #InputName></ion-input>
+      <ion-label position="stacked">Введіть ціну</ion-label>
+      <ion-input
+        formControlName="dishPrice"
+        type="number"
+        min="0"
+        #InputPrice
+      ></ion-input>
+      <ion-button fill="outline" type="submit" [disabled]="!myFormDish.valid">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        Додати Страву</ion-button
+      >
+    </form>
+  </ion-card-content>
+</ion-card>

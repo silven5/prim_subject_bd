@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "subject-example": {
+      "hosting": {
+        "app": [
+          "subject-example"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "subject-example"
+  }
+}
