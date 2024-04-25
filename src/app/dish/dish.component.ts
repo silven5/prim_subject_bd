@@ -30,13 +30,14 @@ export class DishComponent implements OnInit {
     this.editing = true;
   }
   saveEdit(name: any, price: any) {
-    if (price > 0 && typeof name === 'string' && typeof price === 'number') {
-      this.dish.name = name;
-      this.dish.price = price;
-      this.editing = false;
-      let l: number = parseInt(this.dish.id) - 1;
-      this.fbService.updateDish(l, this.dish, bdDish);
-    } else throw 'Error input Dish';
+    console.log('Edit');
+    //if (price > 0 && typeof name === 'string' && typeof price === 'number') {
+    this.dish.name = name;
+    this.dish.price = price;
+    this.editing = false;
+    let l: number = parseInt(this.dish.id) - 1;
+    this.fbService.updateDish(l, this.dish, bdDish);
+    // } else throw 'Error input Dish';
   }
   ngOnInit() {}
 }
