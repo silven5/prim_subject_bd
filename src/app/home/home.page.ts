@@ -14,7 +14,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { bdDish, bdDishType } from '../service/congi-bd';
+import { bdDish, bdDishType } from '../service/config-bd';
 
 @Component({
   selector: 'app-home',

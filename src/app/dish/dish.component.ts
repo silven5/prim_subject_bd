@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Dish } from '../Model/dish';
 import { FirebaseDishTypeService } from '../service/firebase.service';
-import { bdDish } from '../service/congi-bd';
+import { bdDish } from '../service/config-bd';
 
 @Component({
   selector: 'app-dish',
